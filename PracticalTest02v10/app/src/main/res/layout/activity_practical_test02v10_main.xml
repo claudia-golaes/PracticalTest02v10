@@ -89,7 +89,7 @@
             android:hint="pokemon"/>
 
         <Button
-            android:id="@+id/getTimeButton"
+            android:id="@+id/getPokemonButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Get Pokemon"/>
@@ -135,8 +135,8 @@
 
     <ImageView
         android:id="@+id/imagePokemon"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/ic_launcher_background"
         />
 
