@@ -11,6 +11,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
 import java.io.InputStream
+import java.net.URL
 
 
 class PracticalTest02v10MainActivity : AppCompatActivity() {
@@ -41,7 +42,8 @@ class PracticalTest02v10MainActivity : AppCompatActivity() {
                         val list = response.toString().split(",")
                         pokemonAbilityText.text = list[0]
                         pokemonTypeText.text = list[1]
-                        pokemonImage.setImageURI(list[2].toUri())
+                        val url = URL(list[2])
+                        val imageData = url.readBytes()
                     }
                 }.start()
             }
